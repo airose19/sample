@@ -1,0 +1,270 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family:  Helvetica, Arial, sans-serif ;  
+    color: #411510;
+    background-color: #FFE5E2;
+    scroll-behavior: smooth;
+}
+.container {
+    height: 100vh;  
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    padding: 2px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top:0; 
+    background-color:#6B1209;
+    z-index: 1000;
+}
+
+main{
+    margin: 0 auto;
+    padding: 25px;    
+    margin-top: 10px;
+}
+#logo {
+    font-family: Lobster, Arial, Helvetica, sans-serif ;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+#logo p {
+    font-size: 2.5rem;
+    color:#FFE5E2 ;
+}
+
+
+#nav-bar ul {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;   
+    gap: 20px; 
+}
+ 
+#nav-bar ul li {
+   list-style: none;
+   color: #6B1209;
+}
+
+#nav-bar ul li a{
+    text-decoration: none;
+    color:#FFE5E2 ; 
+}
+
+a {
+    text-decoration: none;
+    color: #6B1209;  
+ }
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; 
+    margin-top: 10px;
+    height: 100vh;
+    width: 100%; 
+} 
+
+.hero-img img {
+    width:100%;
+    height: 200px;
+    object-fit: cover;
+    max-width: 200px;;
+ }
+ 
+.hero-img{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+ }
+
+ section {
+    margin-bottom: 40px;
+    scroll-margin-top: 60px; 
+}
+
+section p {
+    margin: 5px;
+    padding: 10px;
+}
+
+#sweets,#cake-history,#pricing  {
+    margin-top: 50px;
+    padding: 50px;
+}
+#sweets p, #sweets h2, #sweets ul li{
+    font-size: 2rem;
+    margin: 5px;
+    padding: 10px;
+    list-style: square;
+}
+
+#cake-history {
+    margin-top: 30px;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-container{
+    position: relative;
+    overflow: hidden;
+    width: 560px;
+    padding-top: 56.25%  ; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    
+}
+
+#cake-history #video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 560px;
+  max-height: 315px;
+}
+
+#pricing  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#pricing .item-pricing {    
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+    color: #94352a;
+}
+
+form{
+   padding: 20px;
+   text-align: center;
+   font-size: 1.75rem;
+   margin: 10px;
+}
+
+input{
+  font-size: 1.75rem;
+ }
+.social-icons {
+    font-size: 1.75rem;
+  }
+footer{
+   padding: 20px;
+   margin: 10px;
+   text-align: center;
+ }
+
+ #disclaimer{    
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;  
+    }
+    #header {
+        width: 100%;  
+        height: auto;
+        order: -1;       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top:0; 
+        background-color:#6B1209;        
+    }
+
+    #nav-bar{
+        margin: 20px;        
+    }
+    
+    #nav-bar .nav-link{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #nav-bar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #hero {
+        height: 100vh;
+        width: 100%; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem; 
+        margin-top: 10px;       
+    } 
+
+    #sweets,#cake-history,#pricing  {
+        margin-top: 50px;
+        padding: 50px; 
+    }
+
+    main{
+        margin: 100px auto 0 auto;
+        padding: 25px;     
+        width: 100%;          
+        flex: 1
+    }
+    
+    section {
+        scroll-margin-top: 200px; 
+     }
+
+     #pricing  {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 10px;        
+    }
+    
+    footer{
+        width: 100%;  
+        height: 10%;
+        padding: 20px;
+        margin: 10px;
+        text-align: center;
+        
+   }
+}
